@@ -11,7 +11,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Challenge EPS 1 #Gogoblesan</title>
+    <title>Challenge EPS 2 #Gogoblesan</title>
   </head>
   <body>
     <section class="container mx-auto">
@@ -32,7 +32,7 @@
               ></path>
             </svg>
             <p class="text-center">
-              Tugas EPS 1 - #GOGOGBLESAN Dea Afrizal
+              Tugas EPS 2 - #GOGOGBLESAN Dea Afrizal
             </p>
           </div>
         </div>
@@ -40,35 +40,45 @@
       <div class="hero-content mx-auto">
         <div class="flex-column items-center">
           <div class="mb-2">
+            <!-- target object -->
             <div
               class="card w-96 bg-primary text-primary-content"
-              id="targetObject"
+              id="targetObject1"
             >
               <div class="card-body">
-                <h2 class="card-title">Latar Dinamis</h2>
-                <p>
-                  Ubah warna latar ini menjadi dinamis sesuai keinginan pengguna
+                <p id="targetObject2">
+                  ubah menjadi dinamis sesuai keinginan pengguna
                 </p>
               </div>
             </div>
           </div>
           <div class="form-control w-full max-w-xs mx-auto">
+            <!-- selection & input user -->
+            <select class="select select-info w-full max-w-xs" id="selection">
+              <option disabled selected>Pilih Opsi Perubahan</option>
+              <option>Warna Latar</option>
+              <option>Warna Text</option>
+              <option>Ukuran Text</option>
+              <option>Jenis Font</option>
+              <option>Lebar Konten</option>
+              <option>Tinggi Konten</option>
+            </select>
             <label class="label">
-              <span class="label-text">warna baru</span>
-              <span class="label-text-alt">contoh: #7b1111 atau red,blue</span>
+              <span class="label-text">value</span>
             </label>
             <input
               type="text"
-              placeholder="masukan disini"
+              placeholder="masukan value sesuai opsi"
               class="input input-bordered w-full max-w-xs mb-4"
-              id="inputHexa"
+              id="inputValue"
             />
           </div>
+          <!-- trigger button -->
           <button
             class="inline-block cursor-pointer rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-white hover:text-primary mx-auto w-full"
-            onClick="ubahLatar()"
+            onClick="update()"
           >
-            Ubah Warna Latar Objek
+            Perbarui Konten
           </button>
         </div>
       </div>
