@@ -1,33 +1,35 @@
-let opsi = document.getElementById('selection').selectedIndex;
-let input = document.getElementById('inputValue').value;
-let update = () => {
-    alert(opsi);
-    let cekKosong = (isi) => {
-        if (isi == '') {
-            alert('Inputan gak boleh kosong')
-        }
+let target1 = document.getElementById('targetObject1');
+let target2 = document.getElementById('targetObject2');
+let opsi = document.getElementById('selection');
+let input = document.getElementById('inputValue');
+
+let update = ()=>{
+    let option = opsi.options.selectedIndex;
+    if(input.value == ''){
+        alert('inputan Kosong!')
+        return 0;
     }
-    switch (opsi) {
-        case 0:
-            // alert(opsi);
+    switch(option){
+        case 1:
+            target1.style.backgroundColor = input.value
             break;
-        case 'Warna Text':
-            alert('txt' + input);
+        case 2:
+            target2.style.color = input.value
             break;
-        case 'Ukuran Text':
-            alert('uk' + input);
+        case 3:
+            target2.style.fontSize = input.value+'px'
             break;
-        case 'Jenis Font':
-            alert('font' + input);
+        case 4:
+            target2.style.fontFamily = input.value
             break;
-        case 'Lebar Konten':
-            alert('dd' + input);
+        case 5:
+            target1.style.width = input.value+'px'
             break;
-        case 'Tinggi Konten':
-            alert('tt' + input);
+        case 6:
+            target1.style.height = input.value+'px'
             break;
         default:
-            alert('Gak bisa Euy!');
+            alert('Pilihan tidak ada!')
             break;
     }
 }
