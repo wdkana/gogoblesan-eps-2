@@ -28,8 +28,17 @@ let update = ()=>{
         case 6:
             target1.style.height = input.value+'px'
             break;
+        case 7:
+            target1.innerText = input.value
+            break;
         default:
             alert('Pilihan tidak ada!')
             break;
     }
 }
+
+input.addEventListener('keyup', (e)=>{
+    if(e.keyCode == 13){
+        update();
+    }
+})
